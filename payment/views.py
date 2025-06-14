@@ -11,7 +11,7 @@ from django.contrib.auth.decorators import login_required
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
-# Create your views here.
+# buat view kamu disini
 @login_required
 def create_checkout_session(request, course_id):
     course = get_object_or_404(Course, pk=course_id)
